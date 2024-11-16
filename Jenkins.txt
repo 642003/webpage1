@@ -1,0 +1,37 @@
+Jenkins
+step1
+Terminal
+
+Sudo systemctl status jenkins
+
+G
+
+New Terminal
+
+ngrok http 8080
+
+Here we see the status of ngrok from that Click on a fre forwarding link and open a link on browser for copy the link upo upto free.app and paste it on a browser and open it.
+
+③ Click on visit site
+
+username ⇒ kkwagh
+
+password srvool
+
+6 Github
+
+login on a Github Con new window) = Open the repository that we want to build on a jenkins Copy the repo/project link from Code (http).
+
+Jenkins
+
+Click on new item Enter item name (eg.dem) select freestyle Project Click Ok from source code Management Select git= Paste the Git repo url (that copied from githu →From Branches to Build (write main instead of master) from Build Triggers select GitHub hook trigger for GITSem polling
+
+Click Apply Save.
+
+On repo Click Add webhook Setting Click Webhooks On pay payload URL (copy the URL from jenkins or Terminal upto free.app and paste here) (on this URL add a git /github-webhook/ after free.app) ⇒ Select Content type Capplication/json) ⇒ select send me Webhook everything Click Add then Refresh (see green tick) Click on Build Now Cafter successful build) Click Workspace and Optional (found error) run the html file
+
+⑧
+
+Click Config + Build steps select Execute shell Write command cp -r * /var/www/html/ apply & save
+
+Click Build Now.
