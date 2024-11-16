@@ -9,6 +9,12 @@
 (open Docker file and add in it)
 FROM nginx
 COPY index.html/usr/share/nginx/html
+
+FROM nginx:alpine
+WORKDIR /usr/share/nginx/html
+COPY . .
+EXPOSE 80
+
 7)sudo docker build -t myproject
 8)sudo docker image
 9)sudo docker run -d -p 8081:80 myproject
